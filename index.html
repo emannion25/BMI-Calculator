@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BMI Calculator</title>
+        <style>
+            body {background-color: powderblue; margin: 10px 120px; font-family: Verdana;}
+            h1   {color: blue;}
+            p    {font-size: 160%;}
+            input {font-size: 16px; padding: 5px; text-align: center; border: 2px solid black;}
+            table, th,td {margin: 10px; border: 2px solid black; border-collapse: collapse; font-size: 120%;}
+            th, td {padding: 15px; text-align: center}
+            button {padding: 5px; font-size: 100%;}
+        </style>
+        <script>
+        function getBMI() {
+            var h = document.getElementById("height").value;
+            var w = document.getElementById("weight").value;
+            var bmi, health, result;
+
+            if (h>=1 && h<=3 && w>=1 && w<=300){ 
+                bmi = w / (h * h);                
+                if (bmi<18.5){
+                    health = "underweight";
+                } else if (bmi<=25){
+                    health = "ok";
+                } else if (bmi<=30){
+                    health = "overweight";
+                } else{
+                    health = "obese";
+                }
+                result = "Your BMI is: " + parseFloat(bmi).toFixed(1) + "<br><br>" + "You are " + health + "!";                
+            } else {
+                result = "Invalid Input";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+        </script>
+    </head>
+    
+    <body>
+        <div style="display: table-cell; float: left; width: 500px; ">
+            <h1>BMI Calculator</h1>
+
+            <p><label for="height">Enter Height (metres):</label>
+            <input type="number" id="height" min="1" max="3" size=20 value=1.5 step=0.01></p>
+
+            <p><label for="weight">Enter Weight (kg):</label>
+            <input type="number" id="weight" min="1" max="300" size=20 value=50 step=0.01></p>
+
+            <button onclick="getBMI()">Calculate</button>
+
+            <p id="result"></p>
+        </div>
+        
+        <div style="display: table-cell;">
+            <table>
+              <tr style="background-color: white;">
+                <th>Health</th>
+                <th>Range</th>
+              </tr>
+              <tr style="background-color: orange;">
+                <td>Underweight</td>
+                <td>BMI &lt; 18.5</td>                
+              </tr>
+              <tr style="background-color: limegreen;">
+                <td>Normal</td>
+                <td>18.5 &leq; BMI &leq; 25</td>                
+              </tr>
+                <tr style="background-color: orange;">
+                <td>Overweight</td>
+                <td>25 &lt; BMI &leq; 30</td>                
+              </tr>
+                <tr style="background-color: red;">
+                <td>Obese</td>
+                <td>BMI &gt; 30</td>                
+              </tr>
+            </table>                      
+        </div>    
+
+    </body>
+</html>
