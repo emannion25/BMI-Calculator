@@ -2,15 +2,8 @@
 <html>
     <head>
         <title>BMI Calculator</title>
-        <style>
-            body {background-color: powderblue; margin: 10px 120px; font-family: Verdana;}
-            h1   {color: blue;}
-            p    {font-size: 160%;}
-            input {font-size: 18px; padding: 5px; text-align: center; border: 2px solid black;}
-            table, th,td {margin: 10px; border: 2px solid black; border-collapse: collapse; font-size: 120%;}
-            th, td {padding: 15px; text-align: center}
-            button {padding: 5px; font-size: 100%;}
-        </style>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        
         <script>
         function getBMI() {
             var h = document.getElementById("height").value;
@@ -38,6 +31,15 @@
     </head>
     
     <body>
+         <div id="nav">
+           <ul>
+             <li><a href="/home/">Home</a></li>
+             <li><a href="/Travel-Area/">Travel Area</a></li>
+             <li><a href="/BMI-Calculator/">BMI Calculator</a></li>
+             <li style="float:right"><a href="https://github.com/emannion25">GitHub</a></li>
+           </ul>
+        </div>
+        
         <div style="display: table-cell; float: left; width: 500px; ">
             <h1>BMI Calculator</h1>
 
