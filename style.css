@@ -25,6 +25,7 @@
 body {
   background-color: powderblue;  
   font-family: Verdana;
+  margin: 10px 10px;
 }
 h1   {color: blue;}
 p    {font-size: 160%;}
