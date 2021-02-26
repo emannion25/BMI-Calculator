@@ -25,7 +25,8 @@
 body {
   background-color: powderblue;  
   font-family: Verdana;
-  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 h1   {color: blue;}
 p    {font-size: 160%;}
