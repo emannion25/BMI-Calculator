@@ -16,16 +16,16 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-family: verdana;
+  font-family: Verdana;
 }
 #nav li a:hover {
   background-color: #ddd;
 }
 
 body {
-  background-color: powderblue;  
+  background-color: blue;  
   font-family: Verdana;
-  margin: 10px 10px;
+  margin: 10px 10px 10px 10px;
 }
 h1   {color: blue;}
 p    {font-size: 160%;}
